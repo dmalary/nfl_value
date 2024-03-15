@@ -20,7 +20,8 @@ const scrape = (url, name) => {
 
 
 const run = () => {
-  scrape('https://www.drafttek.com/NFL-Trade-Value-Chart.asp', 'rich-hill_draft-value')
+  // scrape('https://www.drafttek.com/NFL-Trade-Value-Chart.asp', 'rich-hill_draft-value')
+  scrape('https://overthecap.com/draft-trade-value-chart', 'fitzgerald-spielberger_draft-value')
   console.log('========== SCRAPE COMPLETE ==========')
 }
 run();
