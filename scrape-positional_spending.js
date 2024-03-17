@@ -7,7 +7,8 @@ const crawler = new CheerioCrawler({
       // Do some data extraction from the page with Cheerio.
       $('#main > div > table > tbody > tr').each((index, el) => {
           data.push({ 
-            year: '2024',
+            index: index,
+            year: $('#main > header:nth-child(3) > h1').text().slice(0,4),
             team: $(el).find('td:nth-child(1)').text(),
             totalPlayers: $(el).find('td:nth-child(2)').text(),
             totalPlayers: $(el).find('td:nth-child(2)').text(),
@@ -23,6 +24,7 @@ const crawler = new CheerioCrawler({
         });
       });
 
+    console.log('request.url', typeof request.url)
       // Save the data to dataset.
       await Dataset.pushData({
           url: request.url,
@@ -32,12 +34,12 @@ const crawler = new CheerioCrawler({
   },
 });
 
-// const run = async () => {
-//     for (let i = 10; i < 25; i++) {
-//         await crawler.run([`https://www.spotrac.com/nfl/positional/breakdown/20${i}/`]);
-//     }
-// console.log('========== CRAWL COMPLETE ==========')
-// }
-// run()
-await crawler.run(['https://www.spotrac.com/nfl/positional/breakdown/2024/']);
+const run = async () => {
+    for (let i = 20; i < 25; i++) {
+        await crawler.run([`https://www.spotrac.com/nfl/positional/breakdown/20${i}/`]);
+    }
 console.log('========== CRAWL COMPLETE ==========')
+}
+run()
+// await crawler.run(['https://www.spotrac.com/nfl/positional/breakdown/2024/']);
+// console.log('========== CRAWL COMPLETE ==========')
