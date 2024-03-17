@@ -10,12 +10,7 @@ node v: node 16
 ### run commands
 install: npm i got-scraping crawlee
 
-scrape: node scrape.js
-
-clean data: node clean.js
-
-### NEXT
-clean data into digestible JSON
+get nfl positional values: node scrape-positional_spending.js
 
 ### conventions
 - [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary)
