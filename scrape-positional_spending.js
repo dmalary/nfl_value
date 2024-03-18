@@ -10,6 +10,7 @@ const crawler = new CheerioCrawler({
             index: index,
             year: $('#main > header:nth-child(3) > h1').text().slice(0,4),
             team: $(el).find('td:nth-child(1)').text(),
+            teamUrl: $(el).find('td:nth-child(1) > a').attr('href'),
             totalPlayers: $(el).find('td:nth-child(2)').text(),
             totalPlayers: $(el).find('td:nth-child(2)').text(),
             qb: $(el).find('td:nth-child(3) > a > span:nth-child(1)').text(),
@@ -24,7 +25,6 @@ const crawler = new CheerioCrawler({
         });
       });
 
-    console.log('request.url', typeof request.url)
       // Save the data to dataset.
       await Dataset.pushData({
           url: request.url,
@@ -40,6 +40,6 @@ const run = async () => {
     }
 console.log('========== CRAWL COMPLETE ==========')
 }
-run()
+run();
 // await crawler.run(['https://www.spotrac.com/nfl/positional/breakdown/2024/']);
 // console.log('========== CRAWL COMPLETE ==========')
