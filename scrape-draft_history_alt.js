@@ -41,6 +41,19 @@ await crawler.run([
   'https://www.pro-football-reference.com/years/2015/draft.htm',
   'https://www.pro-football-reference.com/years/2014/draft.htm',
   'https://www.pro-football-reference.com/years/2013/draft.htm',
+  'https://www.pro-football-reference.com/years/2012/draft.htm',
+  'https://www.pro-football-reference.com/years/2011/draft.htm',
+  'https://www.pro-football-reference.com/years/2010/draft.htm',
+  'https://www.pro-football-reference.com/years/2009/draft.htm',
+  'https://www.pro-football-reference.com/years/2008/draft.htm',
+  'https://www.pro-football-reference.com/years/2007/draft.htm',
+  'https://www.pro-football-reference.com/years/2006/draft.htm',
+  'https://www.pro-football-reference.com/years/2005/draft.htm',
+  'https://www.pro-football-reference.com/years/2004/draft.htm',
+  'https://www.pro-football-reference.com/years/2003/draft.htm',
+  'https://www.pro-football-reference.com/years/2002/draft.htm',
+  'https://www.pro-football-reference.com/years/2001/draft.htm',
+  'https://www.pro-football-reference.com/years/2000/draft.htm',
 ]);
 console.log('========== CRAWL COMPLETE ==========')
 
