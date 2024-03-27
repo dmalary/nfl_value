@@ -19,7 +19,8 @@ const crawler = new CheerioCrawler({
             college: $(el).find('td:nth-child(28)').text(),
             yearsPlayed: +$(el).find('td:nth-child(7)').text() - +$('#meta > div:nth-child(2) > h1 > span:nth-child(1)').text(),
             hof: $(el).find('td:nth-child(4) > i').text() == "HOF",
-            // retired: ($(el).has('td:nth-child(4) > strong')),
+            retired: +$(el).find('td:nth-child(7)').text() == 2023,
+            // retired: $(el).find('td:nth-child(4)').includes('strong'),
         });
       });
 
@@ -32,7 +33,7 @@ const crawler = new CheerioCrawler({
   },
 });
 
-await crawler.run(['https://www.pro-football-reference.com/years/2003/draft.htm'])
+await crawler.run(['https://www.pro-football-reference.com/years/2009/draft.htm'])
 // await crawler.run([
 //   'https://www.pro-football-reference.com/years/2023/draft.htm',
 //   'https://www.pro-football-reference.com/years/2022/draft.htm',
