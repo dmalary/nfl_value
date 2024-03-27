@@ -24,6 +24,8 @@ const clean = () => {
         console.error('Error while parsing JSON data:', err)
       }
     })
+
   })
+  console.log('========== CLEAN COMPLETE ==========')
 }
 clean()
